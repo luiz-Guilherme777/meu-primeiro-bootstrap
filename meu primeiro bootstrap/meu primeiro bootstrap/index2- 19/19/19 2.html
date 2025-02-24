@@ -58,6 +58,8 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+
+            
         }
 
         .card {
@@ -85,6 +87,8 @@
             }
         }
         </style>
+
+        
 
 
 
@@ -211,7 +215,26 @@
                             <div class="mb-3">
                                 <label class="form-label">E-mail</label>
                                 <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com" required>
+                                
                             </div>
+                            
+                                <div class="mb-3">
+                                    <div class="form-group">
+                                        <label for="password">Senha</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Digite sua senha" required>
+                                    </div>
+                                </div>
+                            
+                            
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="show-password">
+                                        <label class="form-check-label" for="show-password">Mostrar senha</label>
+                                    </div>
+                                </div>
+                            
+                            
+
                             <div class="form-group">
                                 <label for="exampleFormControlSelect1">assunto</label>
                                 <select class="form-control" id="exampleFormControlSelect1">
@@ -219,8 +242,10 @@
                                   <option>problemas com um código</option>
                                   <option>contratar</option>
                                   <option>sujestão/ajuste</option>
+                            
                                   
                                 </select>
+                            </div>
                             <div class="mb-3">
                                 <label class="form-label">Mensagem</label>
                                 <textarea class="form-control" id="message" rows="4" placeholder="Digite sua mensagem" required></textarea>
@@ -236,6 +261,17 @@
                 </div>
             </div>
         </section>
+        <script>
+            document.getElementById('show-password').addEventListener('change', function () {
+                var passwordField = document.getElementById('password');
+                
+                if (this.checked) {
+                    passwordField.type = "text";  // Mostrar a senha
+                } else {
+                    passwordField.type = "password";  // Ocultar a senha
+                }
+            });
+        </script>
         
         <section>
             
